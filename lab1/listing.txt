@@ -1,0 +1,84 @@
+dariazh@DESKTOP-C26U56G:~$ git checkout -b master
+Switched to a new branch 'master'
+dariazh@DESKTOP-C26U56G:~$ touch name.py
+dariazh@DESKTOP-C26U56G:~$ nano name.py
+dariazh@DESKTOP-C26U56G:~$ cat name.py
+My name is master
+
+dariazh@DESKTOP-C26U56G:~$
+dariazh@DESKTOP-C26U56G:~$ git checkout -b feature/practise_git_Daria
+Switched to a new branch 'feature/practise_git_Daria'
+dariazh@DESKTOP-C26U56G:~$ git checkout -b feature/practise_merge_Daria
+Switched to a new branch 'feature/practise_merge_Daria'
+dariazh@DESKTOP-C26U56G:~$ git checkout feature/practise_git_Daria
+Switched to branch 'feature/practise_git_Daria'
+dariazh@DESKTOP-C26U56G:~$ touch my_name.py
+dariazh@DESKTOP-C26U56G:~$ nano my_name.py
+dariazh@DESKTOP-C26U56G:~$ cat my_name.py
+stroke = "Hello world!"
+for i in range(10):
+    print(stroke)
+dariazh@DESKTOP-C26U56G:~$ git commikt -m "Первый коммит"
+git: 'commikt' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+dariazh@DESKTOP-C26U56G:~$ git add my_name.py
+dariazh@DESKTOP-C26U56G:~$ git commit -m "Первый коммит"
+[feature/practise_git_Daria 53f6f9c] Первый коммит
+ Committer: Daria2605 <dariazh@DESKTOP-C26U56G.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+ create mode 100644 my_name.py
+dariazh@DESKTOP-C26U56G:~$ git checkout master
+Switched to branch 'master'
+dariazh@DESKTOP-C26U56G:~$ git add name.py
+dariazh@DESKTOP-C26U56G:~$ git commit -m "Второй коммит"
+[master 465242a] Второй коммит
+ Committer: Daria2605 <dariazh@DESKTOP-C26U56G.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+ create mode 100644 name.py
+dariazh@DESKTOP-C26U56G:~$ git revert HEAD
+[master f1f9771] Revert "Второй коммит"
+ Committer: Daria2605 <dariazh@DESKTOP-C26U56G.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 name.py
+dariazh@DESKTOP-C26U56G:~$ git checkout feature/practise_merge_Daria
+Switched to branch 'feature/practise_merge_Daria'
+dariazh@DESKTOP-C26U56G:~$ nano name.py
+dariazh@DESKTOP-C26U56G:~$ git checkout master
+Switched to branch 'master'
+dariazh@DESKTOP-C26U56G:~$ git merge feature/practise_merge_Daria
+Already up to date.
